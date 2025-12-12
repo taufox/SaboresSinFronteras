@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recuerdos de coleccion</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amarante&family=Luxurious+Script&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Ruffle JS -->
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+
+    <style>
+      body {
+        margin: 0;
+        margin-left: 0px;
+        margin-right: 0px;
+        background-color: #ede1d1;
+        overflow-x: hidden;
+      }
+
+      /* BARRA DE NAVEGACIÓN */
+
+      .barra {
+        font-family: "Amarante", serif;
+        font-weight: 400;
+        font-style: normal;
+        position: sticky;
+        top: 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+      }
+      .barra header {
+        display: flex;
+        background-color: #490011c4;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .barra li {
+        display: inline-block;
+        padding: 0px 25px;
+      }
+      .barra a {
+        font-size: 20px;
+        text-decoration: none;
+        color: #ede1d1;
+        transition: 0.3s;
+        margin-top: 40px;
+      }
+      .barra a:hover {
+        color: #f5a80a;
+      }
+      .barra .icon {
+        margin: 0 45px;
+        height: 30px;
+      }
+      .logo {
+        height: 60px;
+      }
+        /* ANIMACIONES RESPONSIVAS */
+      #flash-rancho{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+      #flash-rancho ruffle-player {
+          width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: contain;
+        margin-top: -170px;
+        margin-bottom: 0px;}
+        .ra {
+    font-family: "Amarante", serif;
+        font-weight: 400;
+        font-size: 76px;
+        text-align: center;
+        color: #490011;
+        position: absolute;
+        top: 200px;
+        left: 350px;
+      }
+      .pitayin1,
+      .pitayin2,
+      .pitayin3{
+        position: absolute;
+        top: 650px;
+        color: #490011;
+        font-size: 24px;
+        font-family: "Amarante", serif;
+      }
+      .pitayin1 {
+        left: 33%;
+        top: 73%;
+      }
+      .pitayin2 {
+        left: 47%;
+        top: 73%;
+      }
+      .pitayin3 {
+        left: 61%;
+        top: 73%;
+      }
+              footer{
+            display: flex;
+            justify-content: center;
+        }
+        .enlinea{
+            padding: 20px;
+        }
+        .enlinea * {
+            padding-right: 20px;
+            display: inline-block;
+        }
+        .enlinea h4 {
+            padding-right: 10px;
+            display: inline-block;
+        }
+                .logo{
+          height: 30px;
+        }
+
+    </style>
+  </head>
+
+  <body>
+    <!-- BARRA -->
+    <div class="barra">
+      <header>
+        <a href="/programacion/index.html"
+          ><img
+            class="icon"
+            src="/programacion/Imagenes/casa-08-08.png"
+            alt="inicio"
+        /></a>
+        <nav>
+          <ul>
+            <li><a href="/programacion/Nosotros.html">Nosotros</a></li>
+            <li><a href="/programacion/actividades.html">Actividades</a></li>
+            <li><a href="/programacion/imagen.html">Imagen Corporativa</a></li>
+            <li>
+              <img
+                class="logo"
+                src="/programacion/Imagenes/logo-18.png"
+                alt="logo"
+              />
+            </li>
+            <li><a href="/programacion/publicidad.html">Publicidad</a></li>
+            <li><a href="/programacion/recuerdos.html">Recuerdos</a></li>
+            <li><a href="/programacion/contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <a href="/programacion/galeria.html"
+          ><img
+            class="icon"
+            src="/programacion/Imagenes/camara-24.png"
+            alt="galeria"
+        /></a>
+      </header>
+      </nav>
+      </div>
+        <div>
+    <section>
+      <div id="flash-rancho"></div>
+      <div class="texto-swf">
+        <h1 class="ra">RECUERDOS DE COLECCIÓN</h1>
+            <p class="pitayin1">Reloj</p>
+      <p class="pitayin2">Mantel</p>
+      <p class="pitayin3">cantimplora</p>
+      </div>
+         <div>
+    </div>
+    </section>
+    
+          <script>
+      window.RufflePlayer = window.RufflePlayer || {};
+      const ruffle = window.RufflePlayer.newest();
+
+
+      // Animación rancho
+      const playerrancho = ruffle.createPlayer();
+      playerrancho.style.width = "100%";
+      playerrancho.style.height = "100%";
+      document.getElementById("flash-rancho").appendChild(playerrancho);
+      playerrancho.load("/Animaciones/animación pag recuerdos colección (1).swf");
+    </script>
+          <footer>
+            <div class="enlinea">
+                <h3>Sabores sin fronteras</h3>
+                <p>&copy; MMXXV Todos los derechos reservados.</p>
+                <h4>Redes Sociales:</h4>
+                    <a href="#"><img class="logo" src="/programacion/Imagenes/Facebook_Logo_(2019).png" alt=""></a>
+            </div>
+    </footer>
+  </body>
+</html>

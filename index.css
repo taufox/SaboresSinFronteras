@@ -1,0 +1,15 @@
+ #flash-inicio, 
+#flash-nosotros {
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+    margin: 0 auto; /* centra horizontalmente */
+    overflow: hidden; /* evita que algo se salga */
+}
+
+/* Mantiene tamaño exacto del SWF */
+#flash-inicio embed,
+#flash-nosotros embed {
+    width: 100%;
+    height: 100%;
+    display: block;}    

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imagen</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amarante&family=Luxurious+Script&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Ruffle JS -->
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+
+    <style>
+      body {
+        margin: 0;
+        margin-left: 0px;
+        margin-right: 0px;
+        background-color: #ede1d1;
+        overflow-x: hidden;
+      }
+
+      /* BARRA DE NAVEGACIÓN */
+
+      .barra {
+        font-family: "Amarante", serif;
+        font-weight: 400;
+        font-style: normal;
+        position: sticky;
+        top: 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+      }
+      .barra header {
+        display: flex;
+        background-color: #490011c4;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .barra li {
+        display: inline-block;
+        padding: 0px 25px;
+      }
+      .barra a {
+        font-size: 20px;
+        text-decoration: none;
+        color: #ede1d1;
+        transition: 0.3s;
+        margin-top: 40px;
+      }
+      .barra a:hover {
+        color: #f5a80a;
+      }
+      .barra .icon {
+        margin: 0 45px;
+        height: 30px;
+      }
+      .logo {
+        height: 60px;
+      }
+
+      .linea {
+        width: 1000px;
+        height: 300px;
+        background-color: #ffffff;
+        margin: 10px;
+        line-height: 30px;
+        margin-bottom: 3%;
+        margin-left: -9%;
+        border-radius: 15px;
+        text-align: center;
+        color: rgb(117, 0, 62);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        position: relative;
+      }
+      .enlinea div {
+        display: inline-block;
+        position: relative;
+        left: 400px;
+      }
+      .img1 {
+        width: 300px;
+        height: 300px;
+        margin-left: -75%;
+        border-radius: 15px;
+      }
+      h1 {
+        margin-top: -27%;
+        margin-left: -30%;
+        color: rgb(85, 0, 37);
+        text-align: center;
+      }
+      h2 {
+        position: relative;
+        top: 47%;
+        left: 34%;
+        margin: 0;
+        color: rgb(85, 0, 37);
+        text-align: center;
+        font-size: 20px;
+      }
+            .h{
+        margin-top: -27%;
+        margin-left: -7%;
+        color: rgb(85, 0, 37);
+        text-align: center;
+      }
+      .doc {
+        margin-top: -27%;
+        margin-left: -16%;
+        color: rgb(85, 0, 37);
+        text-align: center;
+      }
+           .doc1 {
+        margin-top: -27%;
+        margin-left: -13%;
+        color: rgb(85, 0, 37);
+        text-align: center;
+      }
+
+      /* BOTONES FIJOS */
+      #boton-ancla,
+      #boton-ancla1,
+      #boton-ancla2,
+      #boton-ancla3,
+      #boton-ancla4,
+      #boton-ancla5 {
+        position:absolute;
+        left: 78%;
+        display: block;
+        cursor: pointer;
+        z-index: 1000;
+        background: transparent;
+      }
+
+      #boton-ancla {
+        top: 46%;
+        width: 40px;
+        height: 40px;
+      }
+      #boton-ancla1 {
+        top: 95%;
+        width: 70px;
+        height: 70px;
+      }
+      #boton-ancla2 {
+        top: 144%;
+        width: 70px;
+        height: 70px;
+      }
+      #boton-ancla3 {
+        top: 193%;
+        width: 70px;
+        height: 70px;
+      }
+      .botona {
+        width: 40px;
+        height: 40px;
+      }
+      
+    </style>
+  </head>
+  <body>
+        <div class="barra">
+      <nav>
+        <header>
+<a href="/programacion/index.html"
+            ><img
+              class="icon"
+              src="/programacion/Imagenes/casa-08-08.png"
+              alt="inicio"
+          /></a>
+          <nav>
+            <ul>
+              <li><a href="/programacion/Nosotros.html">Nosotros</a></li>
+              <li><a href="/programacion/actividades.html">Actividades</a></li>
+              <li>
+                <a href="/programacion/imagen.html">Imagen Corporativa</a>
+              </li>
+              <li>
+                <img
+                  class="logo"
+                  src="/programacion/Imagenes/logo-18.png"
+                  alt="logo"
+                />
+              </li>
+              <li><a href="/programacion/publicidad.html">Publicidad</a></li>
+              <li><a href="/programacion/recuerdos.html">Recuerdos</a></li>
+              <li><a href="/programacion/contacto.html">Contacto</a></li>
+            </ul>
+          </nav>
+          <a href="/programacion/galeria.html"
+            ><img
+              class="icon"
+              src="/programacion/Imagenes/camara-24.png"
+              alt="galeria"
+          /></a>
+        </header>
+      </nav>
+    </div>
+    <section>
+    <!-- BOTONES FIJOS -->
+    <header id="boton-ancla">
+      <a href="/programacion/patrocinadores.html"
+        ><img class="botona" src="/programacion/Imagenes/boton-23.png"
+      /></a>
+    </header>
+    <header id="boton-ancla1">
+      <a href="/programacion/pdigital.html"
+        ><img class="botona" src="/programacion/Imagenes/boton-23.png"
+      /></a>
+    </header>
+    <header id="boton-ancla2">
+      <a href="/programacion/ptradicional.html"
+        ><img class="botona" src="/programacion/Imagenes/boton-23.png"
+      /></a>
+    </header>
+    <header id="boton-ancla3">
+      <a href="/programacion/video.html"
+        ><img class="botona" src="/programacion/Imagenes/boton-23.png"
+      /></a>
+    </header>
+    <!-- BOTÓN -->
+    <article class="enlinea">
+      <div class="linea">
+        <img class="img1" src="/programacion/Imagenes/patro_Mesa de trabajo 1.png" />
+        <h1 class="doc">Patrocinadores</h1>
+        <h2>Mirar detalles</h2>
+      </div>
+      <div class="linea">
+        <img class="img1" src="/programacion/Imagenes/pdigital-02.png" />
+        <h1 class="doc1">Publicidad digital</h1>
+        <h2>Mirar detalles</h2>
+      </div>
+      <div class="linea">
+        <img class="img1" src="/programacion/Imagenes/ptradicional-03.png" />
+        <h1 class="h">Publicidad tradicional</h1>
+        <h2>Mirar detalles</h2>
+      </div>
+      <div class="linea">
+        <img class="img1" src="/programacion/Imagenes/video-04.png" />
+        <h1>Video</h1>
+        <h2>Mirar detalles</h2>
+      </div>
+    </article>
+
+
+    <script>
+      window.RufflePlayer = window.RufflePlayer || {};
+      const ruffle = window.RufflePlayer.newest();
+      // Mostrar botón //
+      setTimeout(() => {
+        document.getElementById("boton-ancla").style.display = "block";
+      }, 0);
+    </script>
+  </body>
+</html>

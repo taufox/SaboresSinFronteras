@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>actividades</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amarante&family=Luxurious+Script&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Ruffle JS -->
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+
+    <style>
+      body {
+        margin: 0;
+        margin-left: 0px;
+        margin-right: 0px;
+        background-color: #ede1d1;
+        overflow-x: hidden;
+      }
+
+      /* BARRA DE NAVEGACIÓN */
+
+      .barra {
+        font-family: "Amarante", serif;
+        font-weight: 400;
+        font-style: normal;
+        position: sticky;
+        top: 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+      }
+      .barra header {
+        display: flex;
+        background-color: #490011c4;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .barra li {
+        display: inline-block;
+        padding: 0px 25px;
+      }
+      .barra a {
+        font-size: 20px;
+        text-decoration: none;
+        color: #ede1d1;
+        transition: 0.3s;
+        margin-top: 40px;
+      }
+      .barra a:hover {
+        color: #f5a80a;
+      }
+      .barra .icon {
+        margin: 0 45px;
+        height: 30px;
+      }
+      .logo {
+        height: 60px;
+      }
+        footer{
+            display: flex;
+            justify-content: center;
+        }
+        .enlinea{
+            padding: 20px;
+        }
+        .enlinea * {
+            padding-right: 20px;
+            display: inline-block;
+        }
+        .enlinea h4 {
+            padding-right: 10px;
+            display: inline-block;
+        }
+        .logo{
+          height: 30px;
+        }
+
+      /* ANIMACIONES RESPONSIVAS */
+      #flash-itinerario {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      #flash-itinerario ruffle-player {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: contain;
+        margin-top: -90px;
+        margin-bottom: 100px;
+        background-color: #490011;
+      }
+
+      .it {
+        font-family: "Luxurious Script", cursive;
+        font-weight: 400;
+        font-size: 130px;
+        text-align: left;
+        color: #ede1d1;
+        position: absolute;
+        top: -600px;
+        left: -170px;
+      }
+      .it2 {
+        font-family: "Luxurious Script", cursive;
+        font-weight: 400;
+        font-size: 50px;
+        text-align: left;
+        color: #490011;
+        position: absolute;
+        top: -405px;
+        left: 635px;
+        writing-mode: sideways-lr;
+      }
+      .it3 {
+        font-family: "Luxurious Script", cursive;
+        font-weight: 400;
+        font-size: 50px;
+        text-align: left;
+        color: #490011;
+        position: absolute;
+        top: -218px;
+        left: 635px;
+        writing-mode: sideways-lr;
+      }
+      .it4 {
+        font-family: "Luxurious Script", cursive;
+        font-weight: 400;
+        font-size: 50px;
+        text-align: left;
+        color: #490011;
+        position: absolute;
+        top: 20px;
+        left: 668px;
+        transform: rotate(-90deg);
+        transform-origin: left top;
+        white-space: nowrap;
+      }
+
+      h1 {
+        font-family: "Luxurious Script", cursive;
+        font-weight: 400;
+        font-size: 120px;
+        color: #ede1d1;
+        margin-top: -1000x;
+        left: 50px;
+        position: absolute;
+      }
+      /* Texto superpuesto */
+      .texto-swf {
+        position: absolute;
+        top: 600px;
+        left: 50%;
+        right: 2%;
+        transform: translate(-50%, -50%);
+        color: #ede1d1;
+        font-size: 24px;
+        text-align: center;
+        z-index: 10;
+        max-width: 800px;
+        font-family: "Amarante", serif;
+      }
+      .tit {
+        font-family: "Amarante", serif;
+        font-weight: 400;
+        font-size: 25px;
+        text-align: left;
+        color: #490011;
+        position: absolute;
+        top: -455px;
+        left: 740px;
+        white-space: nowrap;
+      }
+      .tit2 {
+        font-family: "Amarante", serif;
+        font-weight: 400;
+        font-size: 25px;
+        text-align: left;
+        color: #490011;
+        position: absolute;
+        top: -270px;
+        left: 740px;
+        white-space: nowrap;
+      }
+      .tit3 {
+        font-family: "Amarante", serif;
+        font-weight: 400;
+        font-size: 25px;
+        text-align: left;
+        color: #490011;
+        position: absolute;
+        top: -78px;
+        left: 740px;
+        white-space: nowrap;
+      }
+      .t1 {
+        font-family: "Amarante", serif;
+        font-weight: 400;
+        font-size: 15px;
+        text-align: left;
+        color: #490011;
+        position: absolute;
+        top: -410px;
+        left: 740px;
+        white-space: nowrap;
+      }
+      .p2 {
+        font-family: "Amarante", serif;
+        font-weight: 400;
+        font-size: 15px;
+        text-align: left;
+        color: #490011;
+        position: absolute;
+        top: -410px;
+        left: 870px;
+        white-space: nowrap;
+      }
+      .t2 {
+        font-family: "Amarante", serif;
+        font-weight: 400;
+        font-size: 15px;
+        text-align: left;
+        color: #490011;
+        position: absolute;
+        top: -220px;
+        left: 740px;
+        white-space: nowrap;
+      }
+      .p3 {
+        font-family: "Amarante", serif;
+        font-weight: 400;
+        font-size: 15px;
+        text-align: left;
+        color: #490011;
+        position: absolute;
+        top: -232px;
+        left: 870px;
+        white-space: nowrap;
+      }
+      .t3 {
+        font-family: "Amarante", serif;
+        font-weight: 400;
+        font-size: 15px;
+        text-align: left;
+        color: #490011;
+        position: absolute;
+        top: -35px;
+        left: 740px;
+        white-space: nowrap;
+      }
+      .p4 {
+        font-family: "Amarante", serif;
+        font-weight: 400;
+        font-size: 15px;
+        text-align: left;
+        color: #490011;
+        position: absolute;
+        top: -43px;
+        left: 870px;
+        white-space: nowrap;
+      }
+
+            .pa {
+        font-family: "Luxurious Script", cursive;
+        font-weight: 400;
+        font-size: 120px;
+        color: #490011;
+        margin-top: 154%;
+        position: absolute;
+        white-space: nowrap;
+        margin-left: -5%;
+      }
+            /* BOTÓN */
+  .boton-ancla {
+          display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 80px;
+        cursor: pointer;
+        top: 23%;
+        width: 0px;
+        height: 0px;
+      }
+      .botona{
+          width: 40px;
+        height: 40px;
+      }
+        .boton-ancla1 {
+          display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 80px;
+        cursor: pointer;
+        top: 47.5%;
+        width: 0px;
+        height: 0px;
+      }
+      .botona1{
+          width: 40px;
+        height: 40px;
+      }
+             .boton-ancla2 {
+          display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 80px;
+        cursor: pointer;
+        top: 74%;
+        width: 0px;
+        height: 0px;
+      }
+      .botona2{
+          width: 40px;
+        height: 40px;
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+    <!-- BARRA -->
+    <div class="barra">
+      <header>
+        <a href="./index.html"
+          ><img
+            class="icon"
+            src="./Imagenes/casa-08-08.png"
+            alt="inicio"
+        /></a>
+        <nav>
+          <ul>
+            <li><a href="./Nosotros.html">Nosotros</a></li>
+            <li><a href="./actividades.html">Actividades</a></li>
+            <li><a href="./imagen.html">Imagen Corporativa</a></li>
+            <li>
+              <img
+                class="logo"
+                src="./Imagenes/logo-18.png"
+                alt="logo"
+              />
+            </li>
+            <li><a href="./publicidad.html">Publicidad</a></li>
+            <li><a href="./recuerdos.html">Recuerdos</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <a href="./galeria.html"
+          ><img
+            class="icon"
+            src="./Imagenes/camara-24.png"
+            alt="galeria"
+        /></a>
+      </header>
+    
+
+    <section>
+      <div id="flash-itinerario"></div>
+      <div class="texto-swf">
+        <h1 class="it">Itinerario</h1>
+        <h1 class="it2">Día 1</h1>
+        <h1 class="it3">Día 2</h1>
+        <h1 class="it4">Día 3</h1>
+        <h1 class="tit">Rancho los tabachines</h1>
+        <h1 class="tit2">Parque Benito Juárez</h1>
+        <h1 class="tit3">Parque Benito Juárez</h1>
+        <p class="t1">
+          6:00pm - 7:00pm
+          <br />
+          <br />
+          7:15pm - 8:20pm
+          <br />
+          <br />
+          8:20pm - 1:00 am
+        </p>
+        <p class="p2">
+          Competencia de charcutería.
+          <br />
+          <br />
+          Degustación de vinos.
+          <br />
+          <br />
+          Música en vivo y venta de artículos.
+        </p>
+        <p class="t2">
+          5:00 - 6:00pm
+          <br />
+          <br />
+          6:30 - 7:30pm
+          <br />
+          <br />
+          7:40 - 8:30pm
+        </p>
+        <p class="p3">
+          Conferencia por el presidente <br />
+          de los restauranteros de San Luis.
+          <br />
+          <br />
+          Se impartirá un curso de salsas.
+          <br />
+          <br />
+          Se impartirán cursos de cerámica.
+        </p>
+        <p class="t3">
+          5:00pm
+          <br />
+          <br />
+          6:00 - 7:00pm
+          <br />
+          <br />
+          8:00 - 9:00pm
+        </p>
+        <p class="p4">
+          Venta de alimentos.
+          <br />
+          <br />
+          Presentaciones de bailes regionales <br />
+          y tradicionales.
+          <br />
+          <br />
+          Competencia de salsas.
+        </p>
+      </div>
+  <div>
+      <header class="boton-ancla">
+        <a href="./rancho.html"
+          ><img
+            class="botona"
+            src="./Imagenes/boton-23.png"
+        /></a>
+      </header>
+    </div>
+      <div>
+      <header class="boton-ancla1">
+        <a href="./parque.html"
+          ><img
+            class="botona1"
+            src="./Imagenes/boton-23.png"
+        /></a>
+      </header>
+    </div>
+        <div>
+      <header class="boton-ancla2">
+        <a href="./parque.html"
+          ><img
+            class="botona2"
+            src="./Imagenes/boton-23.png"
+        /></a>
+      </header>
+    </div>
+
+    </script>
+    <script>
+      window.RufflePlayer = window.RufflePlayer || {};
+      const ruffle = window.RufflePlayer.newest();
+
+      // Animación ITINERARIO
+      const playeritinerario = ruffle.createPlayer();
+      playeritinerario.style.width = "100%";
+      playeritinerario.style.height = "100%";
+      document.getElementById("flash-itinerario").appendChild(playeritinerario);
+      playeritinerario.load("/Animaciones/animación pag itinerario.swf");
+
+  
+
+      // Animación rancho
+      const playerparque = ruffle.createPlayer();
+      playerparque.style.width = "100%";
+      playerparque.style.height = "100%";
+      document.getElementById("flash-parque").appendChild(playerparque);
+      playerparque.load("/Animaciones/animación pag parque.swf");
+    </script>
+      <footer>
+            <div class="enlinea">
+                <h3>Sabores sin fronteras</h3>
+                <p>&copy; MMXXV Todos los derechos reservados.</p>
+                <h4>Redes Sociales:</h4>
+                    <a href="#"><img class="logo" src="./Imagenes/Facebook_Logo_(2019).png" alt=""></a>
+            </div>
+    </footer>
+  </body>
+</html>
